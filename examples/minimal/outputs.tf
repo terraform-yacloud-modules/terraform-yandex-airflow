@@ -1,118 +1,119 @@
-# output "vpc_id" {
-#   description = "VPC ID"
-#   value       = module.network.vpc_id
-# }
+output "vpc_id" {
+  description = "VPC ID"
+  value       = module.network.vpc_id
+}
 
-# output "vpc_name" {
-#   description = "VPC Name"
-#   value       = module.network.vpc_name
-# }
+output "vpc_name" {
+  description = "VPC Name"
+  value       = module.network.vpc_name
+}
 
-# output "nat_id" {
-#   description = "NAT Gateway ID"
-#   value       = module.network.nat_gw_id
-# }
+output "nat_id" {
+  description = "NAT Gateway ID"
+  value       = module.network.nat_gw_id
+}
 
-# #
-# # NAT
-# #
-# output "nat_gw_id" {
-#   value = module.network.nat_gw_id
-# }
+#
+# NAT
+#
+output "nat_gw_id" {
+  value = module.network.nat_gw_id
+}
 
-# output "nat_instance_sg_id" {
-#   value = module.network.nat_instance_sg_id
-# }
+output "nat_instance_sg_id" {
+  value = module.network.nat_instance_sg_id
+}
 
-# output "nat_instance_ip" {
-#   value = module.network.nat_instance_ip
-# }
+output "nat_instance_ip" {
+  value = module.network.nat_instance_ip
+}
 
-# #
-# # intra subnets
-# #
-# output "intra_subnets" {
-#   description = "Raw information about intra subnets"
-#   value       = module.network.intra_subnets
-# }
+#
+# intra subnets
+#
+output "intra_subnets" {
+  description = "Raw information about intra subnets"
+  value       = module.network.intra_subnets
+}
 
-# output "intra_subnets_ids" {
-#   description = "List of intra subnets IDs"
-#   value       = module.network.intra_subnets_ids
-# }
+output "intra_subnets_ids" {
+  description = "List of intra subnets IDs"
+  value       = module.network.intra_subnets_ids
+}
 
-# output "intra_subnets_cidr_blocks" {
-#   description = "List of intra subnets cidr_blocks"
-#   value       = module.network.intra_subnets_cidr_blocks
-# }
+output "intra_subnets_cidr_blocks" {
+  description = "List of intra subnets cidr_blocks"
+  value       = module.network.intra_subnets_cidr_blocks
+}
 
-# output "intra_subnets_ipv6_cidr_blocks" {
-#   description = "List of intra subnets IPv6 cidr_blocks"
-#   value       = module.network.intra_subnets_ipv6_cidr_blocks
-# }
+output "intra_subnets_ipv6_cidr_blocks" {
+  description = "List of intra subnets IPv6 cidr_blocks"
+  value       = module.network.intra_subnets_ipv6_cidr_blocks
+}
 
-# output "intra_rt" {
-#   description = "Intra route tables info"
-#   value       = module.network.intra_rt
-# }
+output "intra_rt" {
+  description = "Intra route tables info"
+  value       = module.network.intra_rt
+}
 
-# #
-# # private subnets
-# #
-# output "private_subnets" {
-#   description = "Raw information about private subnets"
-#   value       = module.network.private_subnets
-# }
+#
+# private subnets
+#
+output "private_subnets" {
+  description = "Raw information about private subnets"
+  value       = module.network.private_subnets
+}
 
-# output "private_subnets_ids" {
-#   description = "List of private subnets IDs"
-#   value       = module.network.private_subnets_ids
-# }
+output "private_subnets_ids" {
+  description = "List of private subnets IDs"
+  value       = module.network.private_subnets_ids
+}
 
-# output "private_subnets_cidr_blocks" {
-#   description = "List of private subnets cidr_blocks"
-#   value       = module.network.private_subnets_cidr_blocks
-# }
+output "private_subnets_cidr_blocks" {
+  description = "List of private subnets cidr_blocks"
+  value       = module.network.private_subnets_cidr_blocks
+}
 
-# output "private_subnets_ipv6_cidr_blocks" {
-#   description = "List of private subnets IPv6 cidr_blocks"
-#   value       = module.network.private_subnets_ipv6_cidr_blocks
-# }
+output "private_subnets_ipv6_cidr_blocks" {
+  description = "List of private subnets IPv6 cidr_blocks"
+  value       = module.network.private_subnets_ipv6_cidr_blocks
+}
 
-# output "private_rt" {
-#   description = "Private route tables info"
-#   value       = module.network.private_rt
-# }
+output "private_rt" {
+  description = "Private route tables info"
+  value       = module.network.private_rt
+}
 
-# #
-# # public subnets
-# #
-# output "public_subnets" {
-#   description = "Raw information about public subnets"
-#   value       = module.network.public_subnets
-# }
+#
+# public subnets
+#
+output "public_subnets" {
+  description = "Raw information about public subnets"
+  value       = module.network.public_subnets
+}
 
-# output "public_subnets_ids" {
-#   description = "List of public subnets IDs"
-#   value       = module.network.public_subnets_ids
-# }
+output "public_subnets_ids" {
+  description = "List of public subnets IDs"
+  value       = module.network.public_subnets_ids
+}
 
-# output "public_subnets_cidr_blocks" {
-#   description = "List of public subnets cidr_blocks"
-#   value       = module.network.public_subnets_cidr_blocks
-# }
+output "public_subnets_cidr_blocks" {
+  description = "List of public subnets cidr_blocks"
+  value       = module.network.public_subnets_cidr_blocks
+}
 
-# output "public_subnets_ipv6_cidr_blocks" {
-#   description = "List of public subnets IPv6 cidr_blocks"
-#   value       = module.network.public_subnets_ipv6_cidr_blocks
-# }
+output "public_subnets_ipv6_cidr_blocks" {
+  description = "List of public subnets IPv6 cidr_blocks"
+  value       = module.network.public_subnets_ipv6_cidr_blocks
+}
 
-# output "public_rt" {
-#   description = "Public route tables info"
-#   value       = module.network.public_rt
-# }
+output "public_rt" {
+  description = "Public route tables info"
+  value       = module.network.public_rt
+}
 
-###
+
+# bucket
 
 output "bucket_name" {
   description = "The name of the bucket."
@@ -128,4 +129,50 @@ output "storage_admin_secret_key" {
   description = "Static secret key of the autogenerated Object storage admin service account."
   sensitive   = true
   value       = module.storage_buckets.storage_admin_secret_key
+}
+
+# Airflow cluster outputs
+output "airflow_cluster_id" {
+  description = "ID созданного кластера Airflow"
+  value       = module.airflow.airflow_cluster_id
+}
+
+output "airflow_cluster_name" {
+  description = "Имя созданного кластера Airflow"
+  value       = module.airflow.airflow_cluster_name
+}
+
+output "airflow_cluster_status" {
+  description = "Статус кластера Airflow"
+  value       = module.airflow.airflow_cluster_status
+}
+
+# output "airflow_webserver_url" {
+#   description = "URL веб-сервера Airflow"
+#   value       = module.airflow.airflow_webserver_url
+# }
+
+output "airflow_service_account_id" {
+  description = "ID сервисного аккаунта, используемого кластером Airflow"
+  value       = module.airflow.airflow_service_account_id
+}
+
+output "airflow_subnet_ids" {
+  description = "Список ID подсетей, используемых кластером Airflow"
+  value       = module.airflow.airflow_subnet_ids
+}
+
+output "airflow_created_at" {
+  description = "Время создания кластera Airflow"
+  value       = module.airflow.airflow_created_at
+}
+
+output "airflow_health" {
+  description = "Состояние здоровья кластера Airflow"
+  value       = module.airflow.airflow_health
+}
+
+output "airflow_log_group_id" {
+  description = "ID группы логов Cloud Logging для кластера Airflow"
+  value       = module.airflow.airflow_log_group_id
 }
