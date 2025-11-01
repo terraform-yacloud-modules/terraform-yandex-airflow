@@ -19,9 +19,9 @@ resource "yandex_airflow_cluster" "my_airflow_cluster" {
   service_account_id = var.service_account_id
   admin_password     = var.airflow_admin_password
 
-  depends_on = [
-    yandex_storage_bucket.airflow_dags_bucket
-  ]
+  # depends_on = [
+  #   yandex_storage_bucket.airflow_dags_bucket
+  # ]
 
   code_sync = {
     s3 = {
