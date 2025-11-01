@@ -68,7 +68,6 @@ module "airflow" {
   pip_packages = ["dbt"]
 
   bucket_name          = "bucket-for-airflow-dags-v3"
-  vpc_network_name     = "airflow-network"
   service_account_id   = module.iam_accounts.id
 
   depends_on = [

@@ -50,11 +50,6 @@ variable "bucket_name" {
   type        = string
 }
 
-variable "vpc_network_name" {
-  description = "Name of the VPC network"
-  type        = string
-}
-
 variable "subnet_ids" {
   type        = list(string)
 }
