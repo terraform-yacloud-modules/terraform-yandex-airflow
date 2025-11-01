@@ -33,8 +33,6 @@ No modules.
 | Name | Type |
 |------|------|
 | [yandex_airflow_cluster.my_airflow_cluster](https://registry.terraform.io/providers/yandex-cloud/yandex/latest/docs/resources/airflow_cluster) | resource |
-| [yandex_iam_service_account_static_access_key.airflow_bucket_access_key](https://registry.terraform.io/providers/yandex-cloud/yandex/latest/docs/resources/iam_service_account_static_access_key) | resource |
-| [yandex_storage_bucket.airflow_dags_bucket](https://registry.terraform.io/providers/yandex-cloud/yandex/latest/docs/resources/storage_bucket) | resource |
 | [yandex_client_config.client](https://registry.terraform.io/providers/yandex-cloud/yandex/latest/docs/data-sources/client_config) | data source |
 
 ## Inputs
@@ -55,7 +53,16 @@ No modules.
 
 ## Outputs
 
-No outputs.
+| Name | Description |
+|------|-------------|
+| <a name="output_airflow_cluster_id"></a> [airflow\_cluster\_id](#output\_airflow\_cluster\_id) | ID созданного кластера Airflow |
+| <a name="output_airflow_cluster_name"></a> [airflow\_cluster\_name](#output\_airflow\_cluster\_name) | Имя созданного кластера Airflow |
+| <a name="output_airflow_cluster_status"></a> [airflow\_cluster\_status](#output\_airflow\_cluster\_status) | Статус кластера Airflow |
+| <a name="output_airflow_created_at"></a> [airflow\_created\_at](#output\_airflow\_created\_at) | Время создания кластера Airflow |
+| <a name="output_airflow_health"></a> [airflow\_health](#output\_airflow\_health) | Состояние здоровья кластера Airflow |
+| <a name="output_airflow_log_group_id"></a> [airflow\_log\_group\_id](#output\_airflow\_log\_group\_id) | ID группы логов Cloud Logging для кластера Airflow |
+| <a name="output_airflow_service_account_id"></a> [airflow\_service\_account\_id](#output\_airflow\_service\_account\_id) | ID сервисного аккаунта, используемого кластером Airflow |
+| <a name="output_airflow_subnet_ids"></a> [airflow\_subnet\_ids](#output\_airflow\_subnet\_ids) | Список ID подсетей, используемых кластером Airflow |
 <!-- END_TF_DOCS -->
 
 ## License
