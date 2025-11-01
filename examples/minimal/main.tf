@@ -67,7 +67,9 @@ module "airflow" {
 
   pip_packages = ["dbt"]
 
-  bucket_name        = "bucket-for-airflow-dags-v3"
+  bucket_name        = module.storage_buckets.bucket_name
+  access_key         = module.storage_buckets.storage_admin_access_key
+  secret_key         = module.storage_buckets.storage_admin_secret_key
   service_account_id = module.iam_accounts.id
 
   depends_on = [
