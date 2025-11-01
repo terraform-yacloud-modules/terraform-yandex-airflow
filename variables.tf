@@ -9,15 +9,6 @@ variable "airflow_admin_password" {
   sensitive   = true
 }
 
-variable "airflow_subnets" {
-  description = "List of subnet configurations for Airflow cluster"
-  type = list(object({
-    name           = string
-    zone           = string
-    v4_cidr_blocks = list(string)
-  }))
-}
-
 variable "webserver_config" {
   description = "Webserver configuration for Airflow cluster"
   type = object({
@@ -48,10 +39,11 @@ variable "pip_packages" {
   type        = list(string)
 }
 
-variable "service_account_name" {
-  description = "Name of the service account for Airflow cluster"
+variable "service_account_id" {
+  description = "ID of the IAM service account that is used by the trail"
   type        = string
 }
+
 
 variable "bucket_name" {
   description = "Name of the storage bucket for Airflow DAGs"
@@ -61,4 +53,8 @@ variable "bucket_name" {
 variable "vpc_network_name" {
   description = "Name of the VPC network"
   type        = string
+}
+
+variable "subnet_ids" {
+  type        = list(string)
 }
