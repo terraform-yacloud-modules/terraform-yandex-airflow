@@ -51,5 +51,5 @@ variable "bucket_name" {
 }
 
 variable "subnet_ids" {
-  type        = list(string)
+  type = list(string)
 }

@@ -21,7 +21,7 @@ module "network" {
   folder_id = data.yandex_client_config.client.folder_id
 
   blank_name = "vpc-nat-gateway"
-  azs = ["ru-central1-a", "ru-central1-b", "ru-central1-d"]
+  azs        = ["ru-central1-a", "ru-central1-b", "ru-central1-d"]
 
   private_subnets = [["10.10.0.0/24"], ["10.11.0.0/24"], ["10.12.0.0/24"]]
 
@@ -67,13 +67,13 @@ module "airflow" {
 
   pip_packages = ["dbt"]
 
-  bucket_name          = "bucket-for-airflow-dags-v3"
-  service_account_id   = module.iam_accounts.id
+  bucket_name        = "bucket-for-airflow-dags-v3"
+  service_account_id = module.iam_accounts.id
 
   depends_on = [
     module.iam_accounts,
     module.network,
     module.storage_buckets
-    ]
+  ]
 
 }
