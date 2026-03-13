@@ -19,8 +19,8 @@ resource "yandex_airflow_cluster" "my_airflow_cluster" {
   worker    = var.worker_config
 
   airflow_config = var.airflow_config
-  pip_packages = var.pip_packages
-  deb_packages = coalesce(var.deb_packages, [])
+  pip_packages   = var.pip_packages
+  deb_packages   = coalesce(var.deb_packages, [])
 
   lockbox_secrets_backend = var.lockbox_secrets_backend
   security_group_ids      = var.security_group_ids
