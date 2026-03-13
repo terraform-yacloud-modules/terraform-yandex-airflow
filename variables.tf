@@ -9,6 +9,18 @@ variable "airflow_admin_password" {
   sensitive   = true
 }
 
+variable "description" {
+  description = "Description of the Airflow cluster"
+  type        = string
+  default     = null
+}
+
+variable "labels" {
+  description = "Labels assigned to the Airflow cluster"
+  type        = map(string)
+  default     = null
+}
+
 variable "webserver_config" {
   description = "Webserver configuration for Airflow cluster"
   type = object({
@@ -37,6 +49,13 @@ variable "worker_config" {
 variable "pip_packages" {
   description = "List of pip packages to install in Airflow cluster"
   type        = list(string)
+  default     = []
+}
+
+variable "deb_packages" {
+  description = "Set of system (deb) packages to install in the cluster"
+  type        = set(string)
+  default     = null
 }
 
 variable "service_account_id" {
@@ -46,18 +65,49 @@ variable "service_account_id" {
 
 
 variable "bucket_name" {
-  description = "Name of the storage bucket for Airflow DAGs"
+  description = "Name of the Object Storage bucket for Airflow DAGs (service account must have access)"
   type        = string
 }
 
-variable "access_key" {
-  type = string
-}
-
-variable "secret_key" {
-  type = string
-}
-
 variable "subnet_ids" {
-  type = list(string)
+  description = "List of subnet IDs for the Airflow cluster"
+  type        = list(string)
+}
+
+variable "security_group_ids" {
+  description = "List of security group IDs for the Airflow cluster"
+  type        = list(string)
+  default     = null
+}
+
+variable "airflow_config" {
+  description = "Airflow application configuration (two-level map: section -> option -> value)"
+  type        = map(map(string))
+  default = {
+    "api" = {
+      "auth_backends" = "airflow.api.auth.backend.basic_auth,airflow.api.auth.backend.session"
+    }
+  }
+}
+
+variable "lockbox_secrets_backend" {
+  description = "Lockbox Secrets Backend configuration"
+  type = object({
+    enabled = bool
+  })
+  default = {
+    enabled = true
+  }
+}
+
+variable "logging_enabled" {
+  description = "Enable delivery of Airflow logs to Cloud Logging"
+  type        = bool
+  default     = true
+}
+
+variable "logging_min_level" {
+  description = "Minimum log level for Cloud Logging (TRACE, DEBUG, INFO, WARN, ERROR, FATAL)"
+  type        = string
+  default     = "INFO"
 }

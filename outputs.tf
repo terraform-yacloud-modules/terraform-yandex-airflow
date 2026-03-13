@@ -33,12 +33,6 @@ output "airflow_created_at" {
   value       = yandex_airflow_cluster.my_airflow_cluster.created_at
 }
 
-# Выводы для мониторинга и отладки
-output "airflow_health" {
-  description = "Состояние здоровья кластера Airflow"
-  value       = yandex_airflow_cluster.my_airflow_cluster.health
-}
-
 output "airflow_log_group_id" {
   description = "ID группы логов Cloud Logging для кластера Airflow"
   value       = yandex_airflow_cluster.my_airflow_cluster.logging.log_group_id

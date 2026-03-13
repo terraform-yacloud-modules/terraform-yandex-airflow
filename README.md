@@ -1,6 +1,8 @@
-# Yandex Cloud <RESOURCE> Terraform module
+# Yandex Cloud Airflow Terraform module
 
-Terraform module which creates Yandex Cloud <RESOURCE> resources.
+Terraform module which creates [Managed Service for Apache Airflow](https://yandex.cloud/ru/docs/managed-airflow/) clusters in Yandex Cloud.
+
+Ресурс: [yandex_airflow_cluster](https://yandex.cloud/ru/docs/terraform/resources/airflow_cluster).
 
 ## Examples
 
@@ -39,15 +41,13 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_access_key"></a> [access\_key](#input\_access\_key) | n/a | `string` | n/a | yes |
 | <a name="input_airflow_admin_password"></a> [airflow\_admin\_password](#input\_airflow\_admin\_password) | Admin password for Airflow cluster | `string` | n/a | yes |
 | <a name="input_airflow_cluster_name"></a> [airflow\_cluster\_name](#input\_airflow\_cluster\_name) | Name of the Airflow cluster | `string` | n/a | yes |
-| <a name="input_bucket_name"></a> [bucket\_name](#input\_bucket\_name) | Name of the storage bucket for Airflow DAGs | `string` | n/a | yes |
-| <a name="input_pip_packages"></a> [pip\_packages](#input\_pip\_packages) | List of pip packages to install in Airflow cluster | `list(string)` | n/a | yes |
+| <a name="input_bucket_name"></a> [bucket\_name](#input\_bucket\_name) | Name of the Object Storage bucket for Airflow DAGs | `string` | n/a | yes |
+| <a name="input_pip_packages"></a> [pip\_packages](#input\_pip\_packages) | List of pip packages to install in Airflow cluster | `list(string)` | `[]` | no |
 | <a name="input_scheduler_config"></a> [scheduler\_config](#input\_scheduler\_config) | Scheduler configuration for Airflow cluster | <pre>object({<br/>    count              = number<br/>    resource_preset_id = string<br/>  })</pre> | n/a | yes |
-| <a name="input_secret_key"></a> [secret\_key](#input\_secret\_key) | n/a | `string` | n/a | yes |
 | <a name="input_service_account_id"></a> [service\_account\_id](#input\_service\_account\_id) | ID of the IAM service account that is used by the trail | `string` | n/a | yes |
-| <a name="input_subnet_ids"></a> [subnet\_ids](#input\_subnet\_ids) | n/a | `list(string)` | n/a | yes |
+| <a name="input_subnet_ids"></a> [subnet\_ids](#input\_subnet\_ids) | List of subnet IDs for the Airflow cluster | `list(string)` | n/a | yes |
 | <a name="input_webserver_config"></a> [webserver\_config](#input\_webserver\_config) | Webserver configuration for Airflow cluster | <pre>object({<br/>    count              = number<br/>    resource_preset_id = string<br/>  })</pre> | n/a | yes |
 | <a name="input_worker_config"></a> [worker\_config](#input\_worker\_config) | Worker configuration for Airflow cluster | <pre>object({<br/>    min_count          = number<br/>    max_count          = number<br/>    resource_preset_id = string<br/>  })</pre> | n/a | yes |
 
@@ -59,7 +59,6 @@ No modules.
 | <a name="output_airflow_cluster_name"></a> [airflow\_cluster\_name](#output\_airflow\_cluster\_name) | Имя созданного кластера Airflow |
 | <a name="output_airflow_cluster_status"></a> [airflow\_cluster\_status](#output\_airflow\_cluster\_status) | Статус кластера Airflow |
 | <a name="output_airflow_created_at"></a> [airflow\_created\_at](#output\_airflow\_created\_at) | Время создания кластера Airflow |
-| <a name="output_airflow_health"></a> [airflow\_health](#output\_airflow\_health) | Состояние здоровья кластера Airflow |
 | <a name="output_airflow_log_group_id"></a> [airflow\_log\_group\_id](#output\_airflow\_log\_group\_id) | ID группы логов Cloud Logging для кластера Airflow |
 | <a name="output_airflow_service_account_id"></a> [airflow\_service\_account\_id](#output\_airflow\_service\_account\_id) | ID сервисного аккаунта, используемого кластером Airflow |
 | <a name="output_airflow_subnet_ids"></a> [airflow\_subnet\_ids](#output\_airflow\_subnet\_ids) | Список ID подсетей, используемых кластером Airflow |
