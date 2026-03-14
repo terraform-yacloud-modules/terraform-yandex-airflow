@@ -27,16 +27,6 @@ module "network" {
 
 }
 
-
-module "storage_buckets" {
-  source = "git::https://github.com/terraform-yacloud-modules/terraform-yandex-storage-bucket?ref=v1.40.0"
-
-  bucket_name   = "my-unique-bucket-name"
-  storage_roles = ["storage.admin", "storage.viewer"]
-}
-
-####
-
 module "airflow" {
   source = "../../"
 
@@ -67,15 +57,11 @@ module "airflow" {
 
   pip_packages = ["dbt"]
 
-  bucket_name        = module.storage_buckets.bucket_name
-  access_key         = module.storage_buckets.storage_admin_access_key
-  secret_key         = module.storage_buckets.storage_admin_secret_key
+  bucket_name        = "my-airflow-dags-bucket" # создайте бакет и выдайте сервисному аккаунту права на storage
   service_account_id = module.iam_accounts.id
 
   depends_on = [
     module.iam_accounts,
-    module.network,
-    module.storage_buckets
+    module.network
   ]
-
 }
