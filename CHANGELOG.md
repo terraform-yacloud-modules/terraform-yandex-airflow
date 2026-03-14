@@ -1,3 +1,9 @@
+## v0.7.0 - 2026-03-14
+### Miscellaneous
+- 7496d44 Merge pull request [#8](https://github.com/terraform-yacloud-modules/terraform-yandex-airflow/pull/8) from terraform-yacloud-modules/yandex_storage_bucket
+- 165f286 Remove yandex_storage_bucket
+- fe50f90 Remove yandex_storage_bucket
+
 ## v0.6.0 - 2026-03-02
 ### Miscellaneous
 - dcf2722 Merge pull request [#7](https://github.com/terraform-yacloud-modules/terraform-yandex-airflow/pull/7) from terraform-yacloud-modules/dependabot/github_actions/hashicorp/setup-terraform-4
