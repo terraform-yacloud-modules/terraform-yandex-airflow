@@ -15,10 +15,13 @@ module "iam_accounts" {
 
 data "yandex_client_config" "client" {}
 
+provider "yandex" {
+}
+
 module "network" {
   source = "git::https://github.com/terraform-yacloud-modules/terraform-yandex-vpc.git?ref=v3.0.0"
 
-  folder_id = data.yandex_client_config.client.folder_id
+  folder_id = coalesce(var.folder_id, data.yandex_client_config.client.folder_id)
 
   blank_name = "vpc-nat-gateway"
   azs        = ["ru-central1-a", "ru-central1-b", "ru-central1-d"]
