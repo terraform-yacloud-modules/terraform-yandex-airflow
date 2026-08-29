@@ -1,3 +1,10 @@
+## v0.8.0 - 2026-08-29
+### Chores
+- cbbc3d0 chore(deps): bump actions/cache from 5.0.3 to 5.0.5
+
+### Miscellaneous
+- cdd76a1 Merge pull request [#10](https://github.com/terraform-yacloud-modules/terraform-yandex-airflow/pull/10) from terraform-yacloud-modules/dependabot/github_actions/actions/cache-5.0.5
+
 ## v0.7.0 - 2026-03-14
 ### Miscellaneous
 - 7496d44 Merge pull request [#8](https://github.com/terraform-yacloud-modules/terraform-yandex-airflow/pull/8) from terraform-yacloud-modules/yandex_storage_bucket
