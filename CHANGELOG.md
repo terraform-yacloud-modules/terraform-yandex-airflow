@@ -1,3 +1,10 @@
+## v0.10.0 - 2026-09-01
+### Chores
+- 86c938e chore(deps): bump actions/checkout from 6 to 7
+
+### Miscellaneous
+- c3ceeba Merge pull request [#13](https://github.com/terraform-yacloud-modules/terraform-yandex-airflow/pull/13) from terraform-yacloud-modules/dependabot/github_actions/actions/checkout-7
+
 ## v0.9.0 - 2026-09-01
 ### Chores
 - bb47c71 chore(deps): bump actions/cache from 5.0.5 to 6.1.0
