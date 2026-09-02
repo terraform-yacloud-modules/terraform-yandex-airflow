@@ -1,3 +1,10 @@
+## v0.11.0 - 2026-09-02
+### Bug Fixes
+- 6e07202 fix: передача folder_id в примере с приоритетом tfvars над YC_FOLDER_ID
+
+### Miscellaneous
+- bdfa2a6 Merge pull request [#11](https://github.com/terraform-yacloud-modules/terraform-yandex-airflow/pull/11) from terraform-yacloud-modules/feature/add-folder-id-tfvars
+
 ## v0.10.0 - 2026-09-01
 ### Chores
 - 86c938e chore(deps): bump actions/checkout from 6 to 7
