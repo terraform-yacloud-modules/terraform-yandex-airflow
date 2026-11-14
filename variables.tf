@@ -37,6 +37,15 @@ variable "scheduler_config" {
   })
 }
 
+variable "dag_processor_config" {
+  description = "DAG processor configuration for Airflow cluster. Required for Airflow 3.x"
+  type = object({
+    count              = number
+    resource_preset_id = string
+  })
+  default = null
+}
+
 variable "worker_config" {
   description = "Worker configuration for Airflow cluster"
   type = object({

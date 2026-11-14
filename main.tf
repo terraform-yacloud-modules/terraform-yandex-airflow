@@ -14,9 +14,10 @@ resource "yandex_airflow_cluster" "my_airflow_cluster" {
     }
   }
 
-  webserver = var.webserver_config
-  scheduler = var.scheduler_config
-  worker    = var.worker_config
+  webserver     = var.webserver_config
+  scheduler     = var.scheduler_config
+  dag_processor = var.dag_processor_config
+  worker        = var.worker_config
 
   airflow_config = var.airflow_config
   pip_packages   = var.pip_packages

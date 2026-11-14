@@ -45,6 +45,7 @@ No modules.
 | <a name="input_airflow_cluster_name"></a> [airflow\_cluster\_name](#input\_airflow\_cluster\_name) | Name of the Airflow cluster | `string` | n/a | yes |
 | <a name="input_airflow_config"></a> [airflow\_config](#input\_airflow\_config) | Airflow application configuration (two-level map: section -> option -> value) | `map(map(string))` | <pre>{<br/>  "api": {<br/>    "auth_backends": "airflow.api.auth.backend.basic_auth,airflow.api.auth.backend.session"<br/>  }<br/>}</pre> | no |
 | <a name="input_bucket_name"></a> [bucket\_name](#input\_bucket\_name) | Name of the Object Storage bucket for Airflow DAGs (service account must have access) | `string` | n/a | yes |
+| <a name="input_dag_processor_config"></a> [dag\_processor\_config](#input\_dag\_processor\_config) | DAG processor configuration for Airflow cluster. Required for Airflow 3.x | <pre>object({<br/>    count              = number<br/>    resource_preset_id = string<br/>  })</pre> | `null` | no |
 | <a name="input_deb_packages"></a> [deb\_packages](#input\_deb\_packages) | Set of system (deb) packages to install in the cluster | `set(string)` | `null` | no |
 | <a name="input_description"></a> [description](#input\_description) | Description of the Airflow cluster | `string` | `null` | no |
 | <a name="input_labels"></a> [labels](#input\_labels) | Labels assigned to the Airflow cluster | `map(string)` | `null` | no |
