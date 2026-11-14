@@ -1,3 +1,10 @@
+## v0.12.0 - 2026-11-14
+### Bug Fixes
+- e8027be fix: support Airflow 3.x dag processor and make minimal example runnable
+
+### Miscellaneous
+- 7ad5a25 Merge pull request [#14](https://github.com/terraform-yacloud-modules/terraform-yandex-airflow/pull/14) from terraform-yacloud-modules/fix/minimal-example-runnable
+
 ## v0.11.0 - 2026-09-02
 ### Bug Fixes
 - 6e07202 fix: передача folder_id в примере с приоритетом tfvars над YC_FOLDER_ID
