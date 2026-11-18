@@ -1,3 +1,7 @@
+## v0.13.0 - 2026-11-18
+### Miscellaneous
+- 9493646 ci: run semver job only on push to main ([#15](https://github.com/terraform-yacloud-modules/terraform-yandex-airflow/pull/15))
+
 ## v0.12.0 - 2026-11-14
 ### Bug Fixes
 - e8027be fix: support Airflow 3.x dag processor and make minimal example runnable
