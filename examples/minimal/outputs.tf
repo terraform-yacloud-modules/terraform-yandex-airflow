@@ -30,7 +30,7 @@ output "airflow_subnet_ids" {
 }
 
 output "airflow_created_at" {
-  description = "Время создания кластera Airflow"
+  description = "Время создания кластера Airflow"
   value       = module.airflow.airflow_created_at
 }
 
