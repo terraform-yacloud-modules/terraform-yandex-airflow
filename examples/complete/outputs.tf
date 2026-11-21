@@ -1,0 +1,50 @@
+# Airflow cluster outputs
+output "airflow_cluster_id" {
+  description = "ID созданного кластера Airflow"
+  value       = module.airflow.airflow_cluster_id
+}
+
+output "airflow_cluster_name" {
+  description = "Имя созданного кластера Airflow"
+  value       = module.airflow.airflow_cluster_name
+}
+
+output "airflow_cluster_status" {
+  description = "Статус кластера Airflow"
+  value       = module.airflow.airflow_cluster_status
+}
+
+# output "airflow_webserver_url" {
+#   description = "URL веб-сервера Airflow"
+#   value       = module.airflow.airflow_webserver_url
+# }
+
+output "airflow_service_account_id" {
+  description = "ID сервисного аккаунта, используемого кластером Airflow"
+  value       = module.airflow.airflow_service_account_id
+}
+
+output "airflow_subnet_ids" {
+  description = "Список ID подсетей, используемых кластером Airflow"
+  value       = module.airflow.airflow_subnet_ids
+}
+
+output "airflow_created_at" {
+  description = "Время создания кластера Airflow"
+  value       = module.airflow.airflow_created_at
+}
+
+output "airflow_version" {
+  description = "Версия Apache Airflow в кластере"
+  value       = module.airflow.airflow_version
+}
+
+output "airflow_python_version" {
+  description = "Версия Python, на которой работает Airflow"
+  value       = module.airflow.airflow_python_version
+}
+
+output "airflow_log_group_id" {
+  description = "ID группы логов Cloud Logging для кластера Airflow"
+  value       = module.airflow.airflow_log_group_id
+}

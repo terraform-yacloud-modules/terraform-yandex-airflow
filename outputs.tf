@@ -28,6 +28,16 @@ output "airflow_subnet_ids" {
   value       = yandex_airflow_cluster.my_airflow_cluster.subnet_ids
 }
 
+output "airflow_version" {
+  description = "Версия Apache Airflow в кластере"
+  value       = yandex_airflow_cluster.my_airflow_cluster.airflow_version
+}
+
+output "airflow_python_version" {
+  description = "Версия Python, на которой работает Airflow"
+  value       = yandex_airflow_cluster.my_airflow_cluster.python_version
+}
+
 output "airflow_created_at" {
   description = "Время создания кластера Airflow"
   value       = yandex_airflow_cluster.my_airflow_cluster.created_at
